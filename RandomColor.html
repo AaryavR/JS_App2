@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Random Color</title>
+        <style>
+            button{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        </style>
+    </head>
+    <body>
+        <button onClick="doo()">Click me to change the color of the background</button>
+
+        <script>
+            function doo() {
+                var colors = ["blue", "yellow", "green", "purple", "black", "white", "aqua-blue"];
+                var color = colors[Math.floor(Math.random() * colors.length)];
+                document.body.style.backgroundColor = color
+            }
+        </script>
+    </body>
+
+</html>
