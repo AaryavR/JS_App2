@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Palindrome Checker</title>
+    </head>
+
+    <body>
+        <h1>Enter a word and click the buton to see if it is a palindrome</h1>
+        <input type="text" id="word">
+        <button onClick="doo()">Click</button>
+
+        <script>
+            function doo() {
+                var myString = document.getElementById("word").value;
+                if (myString == "") {
+                    alert("Value entered is not valid, please change it and try again");
+                }
+                var nword = myString.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+                
+                var rnword = nword.split("").reverse().join("")
+
+                if (nword == rnword) {
+                    alert(myString + " is a palindrome")
+                }
+
+                else {
+                    alert(myString + " is not a palindrome")
+                }
+            }
+
+        </script>
+
+
+    </body>
+
+
+</html>
